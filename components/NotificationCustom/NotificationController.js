@@ -51,7 +51,7 @@ exports.requestGradeHandler = async (req, res, next) => {
     console.log(info)
     const teacherList = await classModel.TeachersOfClass.find({ classId: info.classRoomId })
     // Lưu vào NotificationModel
-    const message = `Request ${Title} grade review`
+    const message = `Request ${info.title} grade review`
     let id = await saveNotificationModel(teacherList, message, info.userId)
     console.log("Đã lưu")
     for (let teacher of teacherList) {
