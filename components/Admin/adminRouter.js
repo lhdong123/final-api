@@ -1,5 +1,5 @@
 const express = require("express")
-const passport = require("../components/User/passport")
+const passport = require("../User/passport")
 const router = express.Router()
 
 const adminController = require("./adminController")
