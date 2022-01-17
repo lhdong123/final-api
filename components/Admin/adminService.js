@@ -1,9 +1,9 @@
 const bcrypt = require("bcrypt")
 const saltRounds = 10
 const adminModel = require("./adminModel")
-const userModel = require("../components/User/userModel")
-const classModel = require("../components/classes/classesModel")
-const gradeModel = require("../components/Assignment/Model/gradeAssignment")
+const userModel = require("../User/userModel")
+const classModel = require("../classes/classesModel")
+const gradeModel = require("../Assignment/Model/gradeAssignment")
 exports.isExistInData = async (userInfo) => {
     // Lấy danh sách admin
     const adminList = await adminModel.find();
